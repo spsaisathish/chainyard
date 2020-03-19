@@ -95,7 +95,7 @@ class SingleBlock extends Component {
     getSingleBlock() {	  
         this.setState({loading:true});
         const latestBlockHash =  window.localStorage.getItem('hash');  
-        fetch(process.env.REACT_APP_API_ENDPOINT + '/rawblock?hash=' +latestBlockHash, {
+        fetch('/api/rawblock/'+ latestBlockHash, {
           method: 'GET'       
         }).then(response => response.json())
           .then(item => {        
@@ -113,7 +113,7 @@ class SingleBlock extends Component {
     viewSingleTransaction = (e) => {	
         const hash = e.target.id;
         this.setState({loading:true, modalTitle : 'Hash : '+ hash });      
-        fetch(process.env.REACT_APP_API_ENDPOINT + '/rawtx?hash='+ hash, {
+        fetch('/api/rawtx/'+ hash, {
           method: 'GET'       
         }).then(response => response.json())
           .then(item => {        

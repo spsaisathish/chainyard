@@ -11,7 +11,7 @@ class LatestBlock extends Component {
     }
     getLatestBlock() {	  
       this.setState({loading:true});      
-      fetch(process.env.REACT_APP_API_ENDPOINT + '/latestblock', {
+      fetch('/api/latestblock', {
         method: 'GET'       
       }).then(response => response.json())
         .then(item => {          
