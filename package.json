@@ -11,12 +11,12 @@
     "env-cmd": "^10.0.1",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
-    "http-proxy-middleware": "^1.0.3",
+    "http-proxy-middleware": "^3.0.3",
     "morgan": "^1.9.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
